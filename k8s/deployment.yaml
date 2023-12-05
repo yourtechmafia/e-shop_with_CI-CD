@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: e-shop-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: e-shop
+  template:
+    metadata:
+      labels:
+        app: e-shop
+    spec:
+      containers:
+      - name: e-shop
+        image: yourtechmafia/e-shop:latest
+        ports:
+        - containerPort: 3000
