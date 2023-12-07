@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: e-shop
-        image: yourtechmafia/e-shop:latest
+        image: techmafia/e-shop:latest  # Updated image name
         ports:
         - containerPort: 3000
